@@ -1,0 +1,44 @@
+/*
+  Place all the styles related to the matching controller here.
+  They will automatically be included in application.css.
+*/
+
+#beta{
+	margin:auto;
+	position:absolute;
+	top:0px;
+	right:0px;	
+}
+
+#social{
+	margin:auto;
+	position:absolute;
+	top:30px;
+	left:30px;
+}
+
+#logo{
+	margin:auto;
+	width:220px;
+	font-weight:bold;
+	text-align:center;
+	font-size:13px;
+	height:140px;
+}
+
+#container{
+	width:920px;
+	height:500px;
+	margin:auto;
+}
+#mainFrame{
+	width:1000px;
+	height:500px;
+	border:none;
+
+}
+
+body {
+    background-color: white;
+    font-family: "Helvetica","Arial","Verdana","sans-serif";
+}
