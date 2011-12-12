@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/Fixtures.html
+
+one:
+  url: MyString
+  score: 1
+  target: 
+  valitaded: false
+
+two:
+  url: MyString
+  score: 1
+  target: 
+  valitaded: false

@@ -3,6 +3,102 @@
   They will automatically be included in application.css.
 */
 
+
+#newCandidate{
+	margin:5px;
+	width:920px;
+}
+#candidateFields{
+	display: table-cell;
+}
+#addCandidate{
+	display: table-cell;
+	height:50px;
+	width:100px;
+	margin:5px;
+
+}
+
+.inputText{
+	height:25px;
+	border:1px solid black;
+	-moz-border-radius:4px;
+	-webkit-border-radius:4px;
+	font:13px Arial,sans-serif;
+	width:180px;
+	padding:6px 25px 4px 6px;
+	color:#aaa;
+	font-weight:bold;
+	background:#eee;
+	-webkit-box-shadow:0 1px 0 #444;
+	-moz-box-shadow:0 1px 0 #444;
+	box-shadow:0 1px 0 #444;
+}
+
+.inputText-validated:focus,
+.inputText-validated:hover,
+.inputText:focus,
+.inputText:hover
+{
+	outline:none;
+	background:#fff;
+	color:#333;
+	text-shadow:0 1px 0 #fff;
+	border:1px solid #eee;
+	-webkit-box-shadow:0 0 4px #000;
+	-moz-box-shadow:0 0 4px #000;
+	box-shadow:0 0 4px #000;
+}
+
+.inputText-validated{
+	height:25px;
+	border:1px solid black;
+	-moz-border-radius:4px;
+	-webkit-border-radius:4px;
+	font:13px Arial,sans-serif;
+	width:180px;
+	padding:6px 25px 4px 6px;
+	color:#000;
+	font-weight:bold;
+	background:#fff;
+	-webkit-box-shadow:0 1px 0 #444;
+	-moz-box-shadow:0 1px 0 #444;
+	box-shadow:0 1px 0 #444;
+}
+
+
+@font-face {
+        font-family: FreeMono;
+        src: url('/fonts/FreeMono.ttf') format('truetype');
+}
+
+.top10 a{
+	font-family:FreeMono;
+	font-weight:bold;
+	color=black;
+	text-decoration: none;
+}
+.top10 a:link {color:#000;}
+.top10 a:visited {color:#000;}
+.top10 a:hover {color:#000;}
+.top10 a:active {color:#000;}
+
+#rank0 a {font-size:40px;}
+#rank1 a {font-size:35px;}
+#rank2 a {font-size:30px;}
+#rank3 a,
+#rank4 a {font-size:25px;}
+#rank5 a,
+#rank6 a,
+#rank7 a,
+#rank8 a,
+#rank9 a {font-size:20px;}
+
+
+#social {
+	width:100px;
+}
+
 #beta{
 	margin:auto;
 	position:absolute;
@@ -40,4 +136,32 @@
 body {
     background-color: white;
     font-family: "Helvetica","Arial","Verdana","sans-serif";
+}
+
+
+.submit,.submit-right,.submit-left {
+	margin:5px;
+    background-color: #F5F5F5;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+	background-color:#f5f5f5;
+	background-image:linear-gradient(top,#f5f5f5,#f1f1f1);
+	background-image:-o-linear-gradient(top,#f5f5f5,#f1f1f1);
+	border:1px solid #dcdcdc;
+    border-radius: 2px 2px 2px 2px;
+    color: #666666;
+    cursor: pointer;
+    font-size: 11px;
+    font-weight: bold;
+    height: 40px;
+    line-height: 27px;
+    min-width: 54px;
+    padding: 0 8px;
+    text-align: center;
+}
+
+.submit:hover,.submit-right:hover,.submit-left:hover {
+    background-color: #F8F8F8;
+    border: 1px solid #C6C6C6;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+    color: #333333;
 }

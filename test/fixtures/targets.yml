@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/Fixtures.html
+
+one:
+  name: MyString
+  sex: MyString
+  score: 1
+  valitaded: false
+
+two:
+  name: MyString
+  sex: MyString
+  score: 1
+  valitaded: false

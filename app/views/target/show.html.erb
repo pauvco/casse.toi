@@ -1,3 +1,18 @@
+<%
+	#@target.links.each do |link|
+	#	link.url
+%>
+
+<%=  %>
+
+
+
+<%
+#	end	
+%>
+
+
+
 <div id="header">
 	<div id="logo">
 		<a href="http://pauv.co">
@@ -13,42 +28,15 @@
 
 </div>
 <div id="container">
-	<div id="mainFrame">
-
-	<%
-		Target.find(:all, :order => "score DESC").first(10).each_with_index do |target,i|
-	%>
-
-		<div id="rank<%= i %>" class="top10">
-
-			<a href="<%= target.link_sex %>/<%= target.name %>">
-				<%= i+1 %>.<%= target.name %>
-			</a>
+	<iframe id="mainFrame" src="<%= @target.links.first.url %>"></iframe> 
 
 
 
 
-		</div>
-
-	<%
-
-		end
-	%>
-
-
-		<div id="newCandidate">
-			<div id="candidateFields">
-				<input type="text" id="candidateName" class="inputText" placeholder="Nom du nouveau candidat"></input>
-				<input type="text" id="candidateUrl" class="inputText" placeholder="URL principale"></input>
-			</div> 
-
-			<div id="addCandidate">
-				<input id="addCandidateButton" class="submit" type="submit" value="Ajouter un candidat">
-			</div> 
-		</div> 
-
+	<div>
+		<input type="text" id="newURL" class="inputText" placeholder="Nouvelle URL"></input>
+		<input class="addUrl" type="submit" value="Ajouter un lien">
 	</div> 
-
 
 
 
@@ -172,7 +160,4 @@ piwikTracker.enableLinkTracking();
 } catch( err ) {}
 </script><noscript><p><img src="http://stat.pauv.co/piwik.php?idsite=1" style="border:0" alt="" /></p></noscript>
 <!-- End Piwik Tracking Code -->
-
-
-
 
