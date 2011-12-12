@@ -5,6 +5,13 @@ window.onload = function(){
 		$("candidateUrl").addEvent('blur',function(e){checkNewCandidateFied(e)});
 	}
 
+	if ($("addUrlButton")) {
+		$("addUrlButton").addEvent('click',function(){alert('')});
+		$("candidateUrl").addEvent('blur',function(e){checkNewCandidateFied(e)});
+	}
+
+
+
   var width = 0;
   if( typeof( window.innerWidth ) == 'number' ) {
     width = window.innerWidth;

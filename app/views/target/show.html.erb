@@ -32,13 +32,19 @@
 
 
 
+	<%
+		if user_signed_in?
+	%>
+
 
 	<div>
-		<input type="text" id="newURL" class="inputText" placeholder="Nouvelle URL"></input>
-		<input class="addUrl" type="submit" value="Ajouter un lien">
+		<input type="text" id="candidateUrl" class="inputText" placeholder="Nouvelle URL"></input>
+		<input id="addUrlButton" class="submit" type="submit" value="Ajouter un lien">
 	</div> 
 
-
+	<%
+		end
+	%>
 
 
 
