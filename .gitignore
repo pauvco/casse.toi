@@ -3,3 +3,8 @@ db/*.sqlite3
 log/*.log
 tmp/
 .sass-cache/
+app/controllers/account_controller.rb~
+app/controllers/home_controller.rb~
+app/views/home/index.html.erb~
+config/routes.rb~
+
