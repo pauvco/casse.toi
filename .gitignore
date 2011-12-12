@@ -7,4 +7,7 @@ app/controllers/account_controller.rb~
 app/controllers/home_controller.rb~
 app/views/home/index.html.erb~
 config/routes.rb~
-
+app/assets/javascripts/home.js~
+app/views/target/show.html.erb~
+app/controllers/link_controller.rb~
+app/controllers/target_controller.rb~

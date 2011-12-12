@@ -6,7 +6,7 @@ window.onload = function(){
 	}
 
 	if ($("addUrlButton")) {
-		$("addUrlButton").addEvent('click',function(){alert('')});
+		$("addUrlButton").addEvent('click',function(){addUrl('')});
 		$("candidateUrl").addEvent('blur',function(e){checkNewCandidateFied(e)});
 	}
 
@@ -52,9 +52,32 @@ function checkNewCandidateFied(event){
 function addCandidate(){
 
 	var req = new Request({
-	    url: 'target/new.json',
+	    url: '/target/new.json',
 	    method: 'post',
 	    data: 'target_name='+$('candidateName').value+'&url='+$('candidateUrl').value,
+	    onRequest: function(){
+//		myElement.set('text', 'loading...');
+	    },
+	    onSuccess: function(responseText){
+//		myElement.set('text', responseText);
+	    },
+	    onFailure: function(){
+//		myElement.set('text', 'Sorry, your request failed :(');
+	    }
+	});
+
+	req.send();
+
+}
+
+
+
+function addUrl(){
+
+	var req = new Request({
+	    url: '/link/new.json',
+	    method: 'post',
+	    data: 'target_id='+CANDIDATE_ID+'&url='+$('candidateUrl').value,
 	    onRequest: function(){
 //		myElement.set('text', 'loading...');
 	    },

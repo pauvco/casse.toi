@@ -12,7 +12,7 @@ class TargetController < ApplicationController
 
     respond_to do |format|
       format.html
-      format.json { render :json => @target.to_json }
+      format.json { render :json => @target.to_json(:include => {:links => {}})}
     end
   end
 end

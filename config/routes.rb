@@ -9,4 +9,5 @@ CasseToiPauvCon::Application.routes.draw do
   match "/n/:name" => "Target#show"
 
   match '/target/new' => 'target#create'
+  match '/link/new' => 'link#create'
 end
