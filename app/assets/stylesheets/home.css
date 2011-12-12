@@ -35,8 +35,8 @@
 	box-shadow:0 1px 0 #444;
 }
 
-.inputText-validated:focus,
-.inputText-validated:hover,
+.inputText-valid:focus,
+.inputText-valid:hover,
 .inputText:focus,
 .inputText:hover
 {
@@ -50,7 +50,7 @@
 	box-shadow:0 0 4px #000;
 }
 
-.inputText-validated{
+.inputText-valid{
 	height:25px;
 	border:1px solid black;
 	-moz-border-radius:4px;
@@ -61,6 +61,23 @@
 	color:#000;
 	font-weight:bold;
 	background:#fff;
+	-webkit-box-shadow:0 1px 0 #444;
+	-moz-box-shadow:0 1px 0 #444;
+	box-shadow:0 1px 0 #444;
+}
+
+
+.inputText-invalid{
+	height:25px;
+	border:1px solid black;
+	-moz-border-radius:4px;
+	-webkit-border-radius:4px;
+	font:13px Arial,sans-serif;
+	width:180px;
+	padding:6px 25px 4px 6px;
+	color:#000;
+	font-weight:bold;
+	background:#ff5252;
 	-webkit-box-shadow:0 1px 0 #444;
 	-moz-box-shadow:0 1px 0 #444;
 	box-shadow:0 1px 0 #444;
