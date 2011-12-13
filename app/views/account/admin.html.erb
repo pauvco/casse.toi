@@ -19,12 +19,18 @@ validate new targets and new links from here :
 
 
 	<%
-		Link.where("validated is NULL").each_with_index do |link,i|
+		Link.where("validated is NULL").order(:target_id).each_with_index do |link,i|
 	%>
 
 		<div id="rank5" class="top10">
 
-			<%= link.url %>
+			<%= link.target.name %>
+		</div>
+
+
+		<div>
+
+			<a href="<%= link.url %>"><%= link.url %></a>
 		</div>
 
 	<%
