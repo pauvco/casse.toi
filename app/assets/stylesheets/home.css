@@ -116,6 +116,27 @@
 	width:100px;
 }
 
+#logincontent {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 90px;
+    text-align: center;
+    width: 450px;
+    font-family: tahoma,arial,verdana,sans-serif;
+    font-size: 12px;
+}
+
+#loginFields{
+	width:250px;
+	text-align:left;
+	margin:auto;
+}
+#loginFields input[type=email],
+#loginFields input[type=password]
+ {
+	width:250px;
+}
+
 #beta{
 	margin:auto;
 	position:absolute;
