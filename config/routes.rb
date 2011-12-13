@@ -11,4 +11,9 @@ CasseToiPauvCon::Application.routes.draw do
 
   match '/target/new' => 'target#create'
   match '/link/new' => 'link#create'
+
+  devise_scope :user do
+    get "/logout" => "devise/sessions#destroy"
+  end
+
 end
