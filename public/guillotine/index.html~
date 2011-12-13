@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>CasseToiPauvCon</title>
+	<link href="/assets/home.css?body=1" media="screen" rel="stylesheet" type="text/css" />
+	<script src="/assets/raphael-min.js?body=1" type="text/javascript"></script>
+</head>
+<body>
+
+
+<script>
+// Creates canvas 320 × 200 at 10, 50
+var paper = Raphael(10, 50, 450, 156);
+
+var guillotine = paper.image('img/guillotine.jpg', 214, 10, 26, 137);
+var mouton = paper.image('img/mouton.jpg', 222, 16, 10, 30);
+var condamne = paper.image('img/o.jpg', 249, 82, 38, 39);
+var aumonier = paper.image('img/t.jpg', 292, 70, 22, 50);
+
+
+function bourreau(){
+	
+ mouton.animate({x: 222,y: 110}, 200,"<", function(){decapite()});
+}
+
+
+function decapite(){
+	condamne.animate({x: 259,y: 105, easing: "bounce", callback: ready()}, 500);
+}
+
+function ready(){
+
+}
+
+</script>
+
+<button onclick="bourreau()">bourreau fais ton office</button>
+
+
+
+
+
+</body>
+</html>
+
