@@ -89,6 +89,13 @@
         src: url('/fonts/FreeMono.ttf') format('truetype');
 }
 
+#targetTitle{
+	font-family:FreeMono;
+	font-weight:bold;
+	font-size:20px;
+}
+
+
 .top10 a{
 	font-family:FreeMono;
 	font-weight:bold;

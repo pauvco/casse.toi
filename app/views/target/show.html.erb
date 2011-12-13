@@ -32,6 +32,10 @@ var CANDIDATE_ID=<%= @target.id %>
 
 </div>
 <div id="container">
+	<div id="targetTitle">
+		<%= @target.name %>
+	</div>
+
 	<iframe id="mainFrame" src="<%= @target.links.first.url %>"></iframe> 
 
 
