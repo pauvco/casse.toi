@@ -4,10 +4,10 @@ one:
   url: MyString
   score: 1
   target: 
-  valitaded: false
+  validated: false
 
 two:
   url: MyString
   score: 1
   target: 
-  valitaded: false
+  validated: false

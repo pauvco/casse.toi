@@ -10,13 +10,13 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111212112756) do
+ActiveRecord::Schema.define(:version => 20111213004636) do
 
   create_table "links", :force => true do |t|
     t.string   "url"
     t.integer  "score"
     t.integer  "target_id"
-    t.boolean  "valitaded"
+    t.boolean  "validated"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -35,7 +35,7 @@ ActiveRecord::Schema.define(:version => 20111212112756) do
     t.string   "name"
     t.string   "sex"
     t.integer  "score"
-    t.boolean  "valitaded"
+    t.boolean  "validated"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

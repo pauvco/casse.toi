@@ -4,7 +4,7 @@ class CreateTargets < ActiveRecord::Migration
       t.string :name
       t.string :sex
       t.integer :score
-      t.boolean :valitaded
+      t.boolean :validated
 
       t.timestamps
     end

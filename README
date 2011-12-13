@@ -1,5 +1,5 @@
-rails generate model Link url:string score:integer target:references valitaded:boolean
-rails generate model Target name:string sex:string score:integer valitaded:boolean
+rails generate model Link url:string score:integer target:references validated:boolean
+rails generate model Target name:string sex:string score:integer validated:boolean
 rails generate controller Target name:string sex:string score:integer valitaded:boolean
 rails generate model Suggestion name:string mail:string suggestion:string
 

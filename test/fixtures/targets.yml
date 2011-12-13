@@ -4,10 +4,10 @@ one:
   name: MyString
   sex: MyString
   score: 1
-  valitaded: false
+  validated: false
 
 two:
   name: MyString
   sex: MyString
   score: 1
-  valitaded: false
+  validated: false

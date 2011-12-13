@@ -1,0 +1,30 @@
+
+	<%
+		Target.where("validated is NULL").each_with_index do |target,i|
+	%>
+
+		<div id="rank5" class="top10">
+
+			<a href="<%= target.link_sex %>/<%= target.name %>">
+				<%= i+1 %>.<%= target.name %>
+			</a>
+		</div>
+
+	<%
+		end
+	%>
+
+
+
+	<%
+		Link.where("validated is NULL").each_with_index do |link,i|
+	%>
+
+		<div id="rank5" class="top10">
+
+			<%= link.url %>
+		</div>
+
+	<%
+		end
+	%>

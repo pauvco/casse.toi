@@ -4,7 +4,7 @@ class CreateLinks < ActiveRecord::Migration
       t.string :url
       t.integer :score
       t.references :target
-      t.boolean :valitaded
+      t.boolean :validated
 
       t.timestamps
     end

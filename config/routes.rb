@@ -4,6 +4,7 @@ CasseToiPauvCon::Application.routes.draw do
   root :to => "home#index"
 
   match "/account/" => "account#index"
+  match "/account/admin" => "account#admin"
 
   match "/nne/:name" => "Target#show"
   match "/n/:name" => "Target#show"
