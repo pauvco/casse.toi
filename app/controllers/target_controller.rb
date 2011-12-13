@@ -1,6 +1,12 @@
 class TargetController < ApplicationController
   def show
 	@target = Target.find_by_name(params[:name])
+
+	if @target.validated || user_signed_in?
+puts "OK"
+	else
+		redirect_to url_for(:controller => 'home', :action => 'index')
+	end
   end
 
 
