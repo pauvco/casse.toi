@@ -1,12 +1,31 @@
 <script>
+
+var moutonPath=[217,30,600,600,{type:"path",path:"m 0.00371684,70.750591 -0.003999998,-41.75 20.000000158,0 20,0 0,9.46085 0,9.46086 -18.14872,29.28914 C 11.869207,93.320471 2.8708868,107.85059 1.8547368,109.50059 0.03957684,112.44801 0.00712684,111.76886 0.00345684,70.750591 z m -0.003999998,-56.75 0,-13.99999960019 20.000000158,0 20,0 0,13.99999960019 0,14 -20,0 -20.000000158,0 0,-14 z",fill:"#000"}];
+
+//mouton.animate({transform: "...r90"}, 500, function () {})
+
+/*
+
+
+var moutonPath=[217,30,600,600,{type:"path",path:"m 0.00371684,70.750591 -0.003999998,-41.75 20.000000158,0 20,0 0,9.46085 0,9.46086 -18.14872,29.28914 C 11.869207,93.320471 2.8708868,107.85059 1.8547368,109.50059 0.03957684,112.44801 0.00712684,111.76886 0.00345684,70.750591 z m -0.003999998,-56.75 0,-13.99999960019 20.000000158,0 20,0 0,13.99999960019 0,14 -20,0 -20.000000158,0 0,-14 z",fill:"#000"}];
+
+var mouton = Raphael(moutonPath)
+mouton.scale(0.22)
+
+
+
+*/
+
+
+
 // Creates canvas 450 × 156 at 10, 50
-var paper = Raphael(10, 50, 450, 156);
+var paper = Raphael(10, 50, 1450, 1156);
 var URW = paper.getFont("URWGothicL-Book")
 
-//var background = paper.image('/img/background.jpg', 0, 0, 450,156);
 var guillotine = paper.image('/img/guillotine.jpg', 214, 10, 26, 137);
-var mouton = paper.image('/img/mouton.svg', 222, 20, 50, 125);
-//var condamne = paper.image('/img/o.jpg', 249, 82, 38, 39);
+
+var mouton = Raphael(moutonPath)
+mouton.scale(0.22)
 var condamne = paper.print(249, 160, "o", URW, 64);
 condamne[0].animate({transform: "...r90"}, 500, function () {})
 
@@ -19,9 +38,10 @@ var aumonier = paper.image('/img/t.jpg', 292, 70, 22, 50);
 paper.print(28, 160, "la gui       ine", URW, 64);
 
 
+
+
 function bourreau(){
-	
- mouton.animate({x: 222,y: 115}, 200,"<", function(){decapite()});
+	mouton.animate({transform: "...t0,430",easing: "<"}, 200, function () {decapite()})
 }
 
 
