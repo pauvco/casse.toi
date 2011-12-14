@@ -1,3 +1,54 @@
+<script>
+// Creates canvas 450 × 156 at 10, 50
+var paper = Raphael(10, 50, 450, 156);
+var URW = paper.getFont("URWGothicL-Book")
+
+//var background = paper.image('/img/background.jpg', 0, 0, 450,156);
+var guillotine = paper.image('/img/guillotine.jpg', 214, 10, 26, 137);
+var mouton = paper.image('/img/mouton.svg', 222, 20, 50, 125);
+//var condamne = paper.image('/img/o.jpg', 249, 82, 38, 39);
+var condamne = paper.print(249, 160, "o", URW, 64);
+condamne[0].animate({transform: "...r90"}, 500, function () {})
+
+//var condamne = paper.text(110, 10, "la gui").attr({font: URW,"font-size":40});
+//'10px "Helvetica Neue", Arial'
+
+var aumonier = paper.image('/img/t.jpg', 292, 70, 22, 50);
+
+
+paper.print(28, 160, "la gui       ine", URW, 64);
+
+
+function bourreau(){
+	
+ mouton.animate({x: 222,y: 115}, 200,"<", function(){decapite()});
+}
+
+
+function decapite(){
+//condamne[0].animate({transform: "...s3,3"}, 500, function () {})
+
+//	condamne.animate({y: 105, easing: "bounce", callback: ready()}, 500);
+
+
+condamne[0].animate({transform: "...t150,0",easing: "bounce"}, 500, function () {})
+
+
+
+}
+
+function ready(){
+
+}
+
+</script>
+
+<button onclick="bourreau()">bourreau fais ton office</button>
+
+
+
+
+
 
 
 
