@@ -2,19 +2,7 @@
 
 var moutonPath=[217,30,600,600,{type:"path",path:"m 0.00371684,70.750591 -0.003999998,-41.75 20.000000158,0 20,0 0,9.46085 0,9.46086 -18.14872,29.28914 C 11.869207,93.320471 2.8708868,107.85059 1.8547368,109.50059 0.03957684,112.44801 0.00712684,111.76886 0.00345684,70.750591 z m -0.003999998,-56.75 0,-13.99999960019 20.000000158,0 20,0 0,13.99999960019 0,14 -20,0 -20.000000158,0 0,-14 z",fill:"#000"}];
 
-//mouton.animate({transform: "...r90"}, 500, function () {})
-
-/*
-
-
-var moutonPath=[217,30,600,600,{type:"path",path:"m 0.00371684,70.750591 -0.003999998,-41.75 20.000000158,0 20,0 0,9.46085 0,9.46086 -18.14872,29.28914 C 11.869207,93.320471 2.8708868,107.85059 1.8547368,109.50059 0.03957684,112.44801 0.00712684,111.76886 0.00345684,70.750591 z m -0.003999998,-56.75 0,-13.99999960019 20.000000158,0 20,0 0,13.99999960019 0,14 -20,0 -20.000000158,0 0,-14 z",fill:"#000"}];
-
-var mouton = Raphael(moutonPath)
-mouton.scale(0.22)
-
-
-
-*/
+var guillotinePath=[191,-83,600,600,{type:"path",path:"m 0,0 0,14.625 10.34375,0 -0.01563,406.99793 15.484375,0 0.03125,-406.99793 39.25,0 -0.01563,406.99793 15.515625,0 0,-406.99793 11.1875,0 0,-14.625 -11.1875,0 -15.5,0 z",fill:"#000"}];
 
 
 
@@ -22,7 +10,9 @@ mouton.scale(0.22)
 var paper = Raphael(10, 50, 1450, 1156);
 var URW = paper.getFont("URWGothicL-Book")
 
-var guillotine = paper.image('/img/guillotine.jpg', 214, 10, 26, 137);
+var guillotine = Raphael(guillotinePath)
+guillotine.scale(0.34)
+
 
 var mouton = Raphael(moutonPath)
 mouton.scale(0.22)
@@ -37,9 +27,17 @@ paper.print(28, 160, "la gui       ine", URW, 64);
 
 
 
-
+var done=false;
 function bourreau(){
-	mouton.animate({transform: "...t0,430",easing: "<"}, 200, function () {decapite()})
+	if (done) {
+		mouton.transform("...t0,-430")
+		condamne.transform("...t-150,0")
+		done = false;
+
+	} else {
+		mouton.animate({transform: "...t0,430",easing: "<"}, 200, function () {decapite()})
+		done=true;
+	}
 }
 
 
@@ -61,7 +59,7 @@ function ready(){
 
 </script>
 
-<button onclick="bourreau()">bourreau fais ton office</button>
+<button onclick="bourreau()">DECAPITER</button>
 
 
 
